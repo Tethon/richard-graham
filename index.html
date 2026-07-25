@@ -1,122 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Richard Graham</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Richard Graham — Executive Operations Partner</title>
+<meta name="description" content="Executive Operations Partner in Boston. Twenty years building operational structure for leaders at launch, transition, and growth.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=DM+Mono:wght@400;500&family=Spectral:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131B24;
+  --ink-2:#2C3A48;
+  --board:#E4E6E0;
+  --board-lift:#EFF0EC;
+  --verdigris:#2E6152;
+  --patina:#8FBFAE;
+  --mute:#6E7A85;
+  --rule:#C9CDC6;
+  --measure:68ch;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--board);color:var(--ink);
+  font-family:"Archivo",system-ui,sans-serif;font-size:17px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:940px;margin:0 auto;padding:0 30px;}
+.tag{
+  font-family:"DM Mono",ui-monospace,monospace;font-size:11.5px;font-weight:500;
+  letter-spacing:.16em;text-transform:uppercase;
+}
+
+/* ============ HERO (dark zone: the claim) ============ */
+.hero{background:var(--ink);color:var(--board);padding:clamp(52px,8vw,96px) 0 clamp(48px,7vw,84px);}
+.hero__id{display:flex;align-items:center;gap:22px;margin-bottom:clamp(34px,5vw,52px);}
+.hero__id img{
+  width:88px;height:88px;border-radius:50%;object-fit:cover;flex-shrink:0;
+  border:1px solid rgba(228,230,224,.28);
+}
+.hero__name{font-family:"Spectral",Georgia,serif;font-weight:400;font-size:25px;line-height:1.1;margin:0 0 5px;letter-spacing:-.01em;}
+.hero__role{color:var(--patina);margin:0;}
+.hero h1{
+  font-family:"Spectral",Georgia,serif;font-weight:300;
+  font-size:clamp(33px,6vw,62px);line-height:1.08;letter-spacing:-.02em;
+  margin:0;max-width:19ch;
+}
+.hero h1 em{font-style:italic;color:var(--patina);}
+.hero__body{margin:clamp(26px,4vw,38px) 0 0;max-width:56ch;color:#C3C9CB;}
+.hero__body p{margin:0 0 15px;}
+.hero__pattern{
+  font-family:"Spectral",Georgia,serif;font-style:italic;font-size:clamp(19px,2.4vw,24px);
+  color:var(--patina);margin:clamp(24px,3vw,32px) 0 0;
+}
+.links{display:flex;flex-wrap:wrap;gap:11px;margin-top:clamp(30px,4vw,40px);}
+.link{
+  display:inline-block;text-decoration:none;font-family:"DM Mono",monospace;font-size:13px;
+  letter-spacing:.03em;padding:11px 19px;border:1px solid rgba(228,230,224,.42);color:var(--board);
+  transition:background .18s ease,color .18s ease,border-color .18s ease;
+}
+.link:hover,.link:focus-visible{background:var(--board);color:var(--ink);border-color:var(--board);}
+.link--go{background:var(--verdigris);border-color:var(--verdigris);}
+.link--go:hover,.link--go:focus-visible{background:var(--patina);border-color:var(--patina);color:var(--ink);}
+
+/* ============ SECTIONS (light zone: the evidence) ============ */
+.band{padding:clamp(56px,7vw,92px) 0;}
+.band--alt{background:var(--board-lift);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+.band__eyebrow{color:var(--verdigris);margin:0 0 10px;}
+.band__title{
+  font-family:"Spectral",Georgia,serif;font-weight:400;
+  font-size:clamp(27px,3.7vw,38px);line-height:1.14;letter-spacing:-.012em;
+  margin:0 0 clamp(26px,3.5vw,40px);
+}
+.lede{max-width:var(--measure);color:var(--ink-2);margin:0 0 clamp(30px,4vw,44px);font-size:18px;}
+
+/* ---- signature: the record spine ---- */
+.record{list-style:none;margin:0;padding:0;position:relative;}
+.record::before{content:"";position:absolute;left:0;top:8px;bottom:8px;width:1px;background:var(--rule);}
+.entry{position:relative;padding:0 0 clamp(32px,4.2vw,44px) 28px;}
+.entry:last-child{padding-bottom:0;}
+.entry::before{
+  content:"";position:absolute;left:-3px;top:8px;width:7px;height:7px;border-radius:50%;
+  background:var(--board);border:1px solid var(--mute);
+}
+.entry--now::before{background:var(--verdigris);border-color:var(--verdigris);}
+.band--alt .entry::before{background:var(--board-lift);}
+.entry__tags{display:block;margin-bottom:9px;}
+.entry__fn{color:var(--ink-2);}
+.entry__ctx{color:var(--verdigris);}
+.entry__sep{color:var(--rule);margin:0 7px;}
+.entry__org{
+  font-family:"Spectral",Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,24px);
+  line-height:1.25;margin:0 0 4px;letter-spacing:-.01em;
+}
+.entry__date{color:var(--mute);display:block;margin-bottom:11px;}
+.entry__body{margin:0;max-width:var(--measure);color:var(--ink-2);font-size:15.5px;}
+
+/* ---- credentials ---- */
+.creds{margin:0 0 clamp(26px,3vw,36px);padding:0;list-style:none;max-width:var(--measure);}
+.creds li{padding:15px 0;border-bottom:1px solid var(--rule);}
+.creds li:first-child{border-top:1px solid var(--rule);}
+.creds strong{display:block;font-weight:600;font-size:15.5px;}
+.creds span{font-size:14.5px;color:var(--mute);}
+.sub{
+  font-family:"DM Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--verdigris);margin:clamp(30px,4vw,42px) 0 14px;
+}
+.cite{max-width:var(--measure);font-size:14.5px;color:var(--ink-2);margin:0 0 13px;padding-left:20px;text-indent:-20px;}
+.prose{max-width:var(--measure);color:var(--ink-2);}
+.prose p{margin:0 0 15px;}
+
+/* ---- closing ---- */
+.close{background:var(--ink);color:var(--board);padding:clamp(56px,8vw,96px) 0;}
+.close h2{
+  font-family:"Spectral",Georgia,serif;font-weight:300;font-size:clamp(28px,4.4vw,46px);
+  line-height:1.14;letter-spacing:-.018em;margin:0;max-width:17ch;
+}
+.close p{color:#C3C9CB;max-width:52ch;margin:20px 0 0;}
+footer{background:var(--ink);color:var(--mute);border-top:1px solid rgba(228,230,224,.14);padding:26px 0 40px;}
+footer a{color:var(--patina);}
+.foot{font-family:"DM Mono",monospace;font-size:12px;line-height:1.9;}
+
+:focus-visible{outline:2px solid var(--verdigris);outline-offset:3px;}
+.close :focus-visible,.hero :focus-visible{outline-color:var(--patina);}
+
+/* ---- motion ---- */
+.rise{opacity:0;transform:translateY(13px);transition:opacity .65s ease,transform .65s ease;}
+.rise.seen{opacity:1;transform:none;}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none;}
+  html{scroll-behavior:auto;}
+}
+@media (max-width:620px){
+  body{font-size:16px;}
+  .wrap{padding:0 22px;}
+  .hero__id{gap:16px;}
+  .hero__id img{width:70px;height:70px;}
+  .hero h1{max-width:14ch;}
+  .links{gap:9px;}
+  .link{padding:10px 15px;font-size:12.5px;}
+}
+</style>
 </head>
 <body>
-<img src="richard-graham.jpg" alt="Richard Graham" width="180" height="180">
-<h1>Richard Graham</h1>
-<p>Executive Operations Partner</p>
 
-<p>Some leaders need scheduling. Others need infrastructure.</p>
+<header class="hero">
+  <div class="wrap">
+    <div class="hero__id">
+      <img src="richard-graham.jpg" alt="Richard Graham" width="88" height="88">
+      <div>
+        <p class="hero__name">Richard Graham</p>
+        <p class="hero__role tag">Executive Operations Partner &middot; Boston</p>
+      </div>
+    </div>
 
-<p>The people I work best with are the second kind. They're building something. They're moving fast. They don't have time to manage the operation around themselves.</p>
+    <h1>Some leaders need scheduling. Others need <em>infrastructure</em>.</h1>
 
-<p>I've been asked to do this repeatedly: help a Senior Director launch a Merck research facility, support a division president through Sanofi's acquisition of Genzyme, help establish a newly elected US Senator's office, and today, partner with a private development principal running multimillion-dollar projects.</p>
+    <div class="hero__body">
+      <p>The people I work best with are the second kind. They're building something. They're moving fast. They don't have time to manage the operation around themselves.</p>
+      <p>I've been asked to do this repeatedly: help a Senior Director launch a Merck research facility, support a division president through Sanofi's acquisition of Genzyme, help establish a newly elected US Senator's office, and today, partner with a private development principal running multimillion-dollar projects.</p>
+      <p>I create the operational structure that lets leaders stay focused on leading. I keep priorities organized, work moving, documentation accurate, relationships strong, and decisions ready.</p>
+    </div>
 
-<p>I create the operational structure that lets leaders stay focused on leading. I keep priorities organized, work moving, documentation accurate, relationships strong, and decisions ready.</p>
+    <p class="hero__pattern">Different industries. Same role.</p>
 
-<p>Different industries. Same role.</p>
+    <div class="links">
+      <a class="link link--go" href="mailto:richard@dalton-graham.com">Email Richard</a>
+      <a class="link" href="https://linkedin.com/in/richard-graham-624a20423">LinkedIn</a>
+      <a class="link" href="Richard_Graham_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</header>
 
-<p>If you're that kind of leader, we should talk.</p>
+<section class="band">
+  <div class="wrap">
+    <p class="band__eyebrow tag rise">Selected experience</p>
+    <h2 class="band__title rise">Six institutions. One function.</h2>
 
-<h2>Selected Experience</h2>
+    <ol class="record">
+      <li class="entry entry--now rise">
+        <span class="entry__tags tag"><span class="entry__fn">Executive operations</span><span class="entry__sep">/</span><span class="entry__ctx">ongoing build</span></span>
+        <h3 class="entry__org">Blackwater Development LLC</h3>
+        <span class="entry__date tag">2018 &ndash; Present &middot; Massachusetts</span>
+        <p class="entry__body">Executive and operations partner to a private development principal. Portfolio spans multimillion-dollar residential development, property operations, and financial administration. Manage calendar, communications, contracts, and QuickBooks records; conduct due diligence across deeds, chains of title, and covenants; support acquisition strategy and closing decisions.</p>
+      </li>
 
-<h3>Blackwater Development LLC (2018-Present)</h3>
-<p>Executive and operations partner to a private development principal in Massachusetts. Portfolio spans multimillion-dollar residential development, property operations, and financial administration. Manage calendar, communications, contracts, and QuickBooks records; conduct due diligence across deeds, chains of title, and covenants; support acquisition strategy and closing decisions.</p>
+      <li class="entry rise">
+        <span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">through an acquisition</span></span>
+        <h3 class="entry__org">Genzyme Corporation / Sanofi</h3>
+        <span class="entry__date tag">2010 &ndash; 2011 &middot; Cambridge, MA</span>
+        <p class="entry__body">Senior Administrative Assistant supporting the President of Molecular Oncology / Multiple Sclerosis and the Vice President of Business Development during the Sanofi acquisition. Prepared executive reports, supported budgets and vendor evaluation, and coordinated clinical-affiliation outreach with Harvard, UMass, and Boston College.</p>
+      </li>
 
-<h3>Genzyme Corporation / Sanofi (2010-2011)</h3>
-<p>Senior Administrative Assistant supporting the President of Molecular Oncology / Multiple Sclerosis and the Vice President of Business Development during the Sanofi acquisition. Prepared executive reports, supported budgets and vendor evaluation, and coordinated clinical-affiliation outreach with Harvard, UMass, and Boston College.</p>
+      <li class="entry rise">
+        <span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">at facility launch</span></span>
+        <h3 class="entry__org">Merck Research Laboratories</h3>
+        <span class="entry__date tag">2006 &ndash; 2007 &middot; Boston, MA</span>
+        <p class="entry__body">Executive Assistant to the Senior Director of Molecular Oncology during the launch of a new research facility and laboratory. Managed complex calendars, multi-leg international travel, site budgets, and procurement. Coordinated scientists, facilities, IT, AV, security, vendors, and visitors while the team stood up operations.</p>
+      </li>
 
-<h3>Merck Research Laboratories (2006-2007)</h3>
-<p>Executive Assistant to the Senior Director of Molecular Oncology during the launch of a new research facility and laboratory. Managed complex calendars, multi-leg international travel, site budgets, and procurement. Coordinated scientists, facilities, IT, AV, security, vendors, and visitors while the team stood up operations.</p>
+      <li class="entry rise">
+        <span class="entry__tags tag"><span class="entry__fn">Institutional development</span><span class="entry__sep">/</span><span class="entry__ctx">program built from scratch</span></span>
+        <h3 class="entry__org">Columbia University &mdash; Columbia 250</h3>
+        <span class="entry__date tag">2003 &ndash; 2004 &middot; New York, NY</span>
+        <p class="entry__body">Director of Corporate Sponsorship for Columbia's 250th anniversary. Established the corporate development program from scratch, built a pipeline of more than 100 corporate prospects, and managed relationships through university events, symposia, and performances.</p>
+      </li>
 
-<h3>Columbia University, Columbia 250 (2003-2004)</h3>
-<p>Director of Corporate Sponsorship for Columbia's 250th anniversary. Established the corporate development program from scratch, built a pipeline of more than 100 corporate prospects, and managed relationships through university events, symposia, and performances.</p>
+      <li class="entry rise">
+        <span class="entry__tags tag"><span class="entry__fn">Public affairs</span><span class="entry__sep">/</span><span class="entry__ctx">newly elected office</span></span>
+        <h3 class="entry__org">New York State Senate &mdash; Office of Senator Liz Krueger</h3>
+        <span class="entry__date tag">2002 &ndash; 2003 &middot; New York, NY</span>
+        <p class="entry__body">Director of Public Affairs and Communications for a newly elected senator. Directed media relations, maintained community and government relationships, conducted confidential issue research, and helped establish the office's public-facing operations.</p>
+      </li>
 
-<h3>New York State Senate — Office of Senator Liz Krueger (2002-2003)</h3>
-<p>Director of Public Affairs and Communications for a newly elected senator. Directed media relations, maintained community and government relationships, conducted confidential issue research, and helped establish the office's public-facing operations.</p>
+      <li class="entry rise">
+        <span class="entry__tags tag"><span class="entry__fn">Finance &amp; operations</span><span class="entry__sep">/</span><span class="entry__ctx">campaign into new office</span></span>
+        <h3 class="entry__org">Clinton Senate Campaign, U.S. Senate Office &amp; HillPAC</h3>
+        <span class="entry__date tag">1999 &ndash; 2002 &middot; New York, NY</span>
+        <p class="entry__body">Five roles of increasing responsibility across Hillary Clinton's 2000 Senate campaign, the transition into the new Senate office, and HillPAC. As Deputy Finance Director, managed a portfolio of more than 1,000 donor prospects. In the newly established Senate office, worked with the Sergeant at Arms on IT systems, constituent databases, and official Senate mailings, helping build operational infrastructure at launch.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-<h3>Hillary Clinton for U.S. Senate Committee, U.S. Senate Office, and HillPAC (1999-2002)</h3>
-<p>Five roles of increasing responsibility across Hillary Clinton's 2000 Senate campaign, the transition into the new Senate office, and HillPAC. As Deputy Finance Director, managed a portfolio of more than 1,000 donor prospects. In the newly established Senate office, worked with the Sergeant at Arms on IT systems, constituent databases, and official Senate mailings, helping build operational infrastructure at launch.</p>
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="band__eyebrow tag rise">Research and academic background</p>
+    <h2 class="band__title rise">Trained to find out what is true.</h2>
+    <p class="lede rise">Before the operations work, I trained as a scientist. That background is where the habits come from: define the question, gather what is observable, resist the conclusion you were hoping for. It is also why complex technical environments have never intimidated me.</p>
 
-<h2>Research and Academic Background</h2>
+    <ul class="creds rise">
+      <li><strong>Graduate Study, Biopsychology and Behavioral Neuroscience</strong><span>The Graduate School and University Center, City University of New York. Completed graduate coursework and thesis research. Advisors: Dr. Myron Hofer (Columbia University) and Dr. John Seley (CUNY).</span></li>
+      <li><strong>Post-Baccalaureate Study, Psychobiology</strong><span>Florida Atlantic University. Advisors: Dr. Ingrid B. Johanson and Dr. Leslie M. Terry.</span></li>
+      <li><strong>Bachelor of Arts, Psychology &mdash; cum laude</strong><span>Florida Atlantic University. Minor in Political Science. University Honors Program and honors thesis.</span></li>
+      <li><strong>Florida Real Estate Sales Associate</strong><span>License SL3288477, active. Florida Department of Business and Professional Regulation.</span></li>
+    </ul>
 
-<p>Before the operations work, I trained as a scientist. That background is where the habits come from: define the question, gather what is observable, resist the conclusion you were hoping for. It is also why complex technical environments have never intimidated me.</p>
+    <p class="sub rise">Publications and conference presentations</p>
+    <p class="cite rise">Graham, R.D., Menge, J.A., Terry, L.M., &amp; Hall, W.G. (1998). The effects of isolated maternal cues on ultrasonic vocalizations in neonatal rats [Abstract]. <em>Developmental Psychobiology, 32</em>(2). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, New Orleans.</p>
+    <p class="cite rise">Graham, R.D., Blandino, P., Johanson, I.B., &amp; Terry, L.M. (1997). Repeated maternal deprivation: effects of concurrent odor exposure [Abstract]. <em>Developmental Psychobiology, 30</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, Washington, D.C.</p>
+    <p class="cite rise">Graham, R.D., Johanson, I.B., &amp; Terry, L.M. (1996). Effects of cocaine on memory for odor-milk pairings in young rats [Abstract]. <em>Developmental Psychobiology, 29</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, San Diego.</p>
+    <p class="cite rise">Graham, R.D., Terry, L.M., &amp; Johanson, I.B. (1996). <em>The Developmental Psychobiology Laboratory Manual.</em> Florida Atlantic University.</p>
 
-<h3>Education</h3>
-<p>
-  <strong>Graduate Study, Biopsychology and Behavioral Neuroscience</strong><br>
-  The Graduate School and University Center, City University of New York<br>
-  Completed graduate coursework and thesis research. Advisors: Dr. Myron Hofer (Columbia University) and Dr. John Seley (CUNY).
-</p>
-<p>
-  <strong>Post-Baccalaureate Study, Psychobiology</strong><br>
-  Florida Atlantic University. Advisors: Dr. Ingrid B. Johanson and Dr. Leslie M. Terry.
-</p>
-<p>
-  <strong>Bachelor of Arts, Psychology — cum laude</strong><br>
-  Florida Atlantic University. Minor in Political Science. University Honors Program and honors thesis.
-</p>
+    <p class="sub rise">Research</p>
+    <div class="prose rise">
+      <p>Laboratory work at the New York State Psychiatric Institute and Columbia University College of Physicians and Surgeons, examining neural and behavioral control of ultrasonic vocalizations and serotonin receptor knockout models. Trained in surgical procedure, behavioral testing, microscopy, histology, and statistical analysis.</p>
+      <p>Projects included Maternal-Infant Interactions in 5-HT1A and 5-HT1B Knockout Mice with Dr. Daniela Brunner; Respiratory Distress in 5-HT1A Knockout Mice with Drs. Myron Hofer, Harry Shair, and Rene Hen; Rat Pup Respiratory Behavior Correlated with Ultrasonic Production with Drs. Hofer, Michael Myers, and Susan Brunelli; and Implicit Memory Research with Dr. Martin Chodorow at Hunter College. Field studies in Animal Behavior at the American Museum of Natural History Southwestern Research Station in Portal, AZ.</p>
+    </div>
 
-<h3>License</h3>
-<p>
-  <strong>Florida Real Estate Sales Associate</strong><br>
-  License SL3288477, active. Florida Department of Business and Professional Regulation.
-</p>
+    <p class="sub rise">Teaching</p>
+    <div class="prose rise">
+      <p>Teaching Assistant, Experimental Psychology, Department of Psychology, Hunter College.<br>
+      Teaching Assistant, Psychopharmacology, Department of Psychology, Florida Atlantic University.</p>
+    </div>
 
-<h3>Publications and Conference Presentations</h3>
-<p>Graham, R.D., Menge, J.A., Terry, L.M., &amp; Hall, W.G. (1998). The effects of isolated maternal cues on ultrasonic vocalizations in neonatal rats [Abstract]. <em>Developmental Psychobiology, 32</em>(2). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, New Orleans.</p>
+    <p class="sub rise">Selected honors</p>
+    <div class="prose rise">
+      <p>Science Fellowship, CUNY Graduate Center. CUNY Tuition Scholarship. Outstanding Research in Psychobiology Award, Florida Atlantic University. Ellisa Pollock Memorial Scholarship for Academic Excellence. Charter member, Parliament of Owls Student Leader Honor Society.</p>
+    </div>
 
-<p>Graham, R.D., Blandino, P., Johanson, I.B., &amp; Terry, L.M. (1997). Repeated maternal deprivation: effects of concurrent odor exposure [Abstract]. <em>Developmental Psychobiology, 30</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, Washington, D.C.</p>
+    <p class="sub rise">Where the pattern started</p>
+    <div class="prose rise">
+      <p>Elected Senate President of the Florida Atlantic University Broward Student Government, overseeing an annual budget of approximately $5 million. Treasurer of the Psychology Association. Registration Coordinator for the International Society for Developmental Psychobiology annual meeting.</p>
+    </div>
+  </div>
+</section>
 
-<p>Graham, R.D., Johanson, I.B., &amp; Terry, L.M. (1996). Effects of cocaine on memory for odor-milk pairings in young rats [Abstract]. <em>Developmental Psychobiology, 29</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, San Diego.</p>
+<section class="band">
+  <div class="wrap">
+    <p class="band__eyebrow tag rise">Beyond the work</p>
+    <h2 class="band__title rise">Different industries. Same person.</h2>
+    <div class="prose rise">
+      <p>In the late nineties I was running graduate research at a Columbia lab, working a Senate campaign, teaching experimental psychology, and playing in a softball league in New York. Someone called me a Renaissance man. I took it to mean I could hold several complicated things at once, which turned out to be the whole job description.</p>
+      <p>Since then: a background role in an episode of <em>Burn Notice</em>. Field research on ants, spadefoot toads, and lizards in the Chiricahua Mountains with the American Museum of Natural History. Voter outreach and field operations on a string of campaigns from Florida to Colorado. Enough campaign finance work to know what a fundraising deadline feels like at midnight.</p>
+    </div>
+  </div>
+</section>
 
-<p>Graham, R.D., Terry, L.M., &amp; Johanson, I.B. (1996). <em>The Developmental Psychobiology Laboratory Manual.</em> Florida Atlantic University.</p>
-
-<h3>Research</h3>
-<p>Laboratory work at the New York State Psychiatric Institute and Columbia University College of Physicians and Surgeons, examining neural and behavioral control of ultrasonic vocalizations and serotonin receptor knockout models. Trained in surgical procedure, behavioral testing, microscopy, histology, and statistical analysis.</p>
-
-<p>Projects included Maternal-Infant Interactions in 5-HT1A and 5-HT1B Knockout Mice with Dr. Daniela Brunner; Respiratory Distress in 5-HT1A Knockout Mice with Drs. Myron Hofer, Harry Shair, and Rene Hen; Rat Pup Respiratory Behavior Correlated with Ultrasonic Production with Drs. Hofer, Michael Myers, and Susan Brunelli; and Implicit Memory Research with Dr. Martin Chodorow at Hunter College. Field studies in Animal Behavior at the American Museum of Natural History Southwestern Research Station in Portal, AZ.</p>
-
-<h3>Teaching</h3>
-<p>Teaching Assistant, Experimental Psychology, Department of Psychology, Hunter College.<br>
-Teaching Assistant, Psychopharmacology, Department of Psychology, Florida Atlantic University.</p>
-
-<h3>Selected Honors</h3>
-<p>Science Fellowship, CUNY Graduate Center. CUNY Tuition Scholarship. Outstanding Research in Psychobiology Award, Florida Atlantic University. Ellisa Pollock Memorial Scholarship for Academic Excellence. Charter member, Parliament of Owls Student Leader Honor Society.</p>
-
-<h3>Early Operations Experience</h3>
-<p>Elected Senate President of the Florida Atlantic University Broward Student Government, overseeing an annual budget of approximately $5 million. Treasurer of the Psychology Association. Registration Coordinator for the International Society for Developmental Psychobiology annual meeting. The pattern started early.</p>
-
-<h2>Beyond the Work</h2>
-
-<p>In the late nineties I was running graduate research at a Columbia lab, working a Senate campaign, teaching experimental psychology, and playing in a softball league in New York. Someone called me a Renaissance man. I took it to mean I could hold several complicated things at once, which turned out to be the whole job description.</p>
-
-<p>Since then: a background role in an episode of <em>Burn Notice</em>. Field research on ants, spadefoot toads, and lizards in the Chiricahua Mountains with the American Museum of Natural History. Voter outreach and field operations on a string of campaigns from Florida to Colorado. Enough campaign finance work to know what a fundraising deadline feels like at midnight.</p>
-
-<p>Different industries. Same person.</p>
-
-<h2>Building something complex? Let's talk.</h2>
-
-<h2>Résumé</h2>
-<p><a href="Richard_Graham_Resume.pdf">Download résumé (PDF)</a></p>
-
-<p>
-  <a href="mailto:richard@dalton-graham.com">Email Richard</a>
-  &nbsp;|&nbsp;
-  <a href="https://linkedin.com/in/richard-graham-624a20423">View LinkedIn</a>
-</p>
-</body>
-</html>
-
-<hr>
+<section class="close">
+  <div class="wrap">
+    <h2>Building something complex? Let's talk.</h2>
+    <p>I'm currently looking for Executive Operations and senior executive support roles in Boston and Cambridge.</p>
+    <div class="links">
+      <a class="link link--go" href="mailto:richard@dalton-graham.com">Email Richard</a>
+      <a class="link" href="https://linkedin.com/in/richard-graham-624a20423">LinkedIn</a>
+      <a class="link" href="Richard_Graham_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</section>
 
 <footer>
-  <p>
+  <div class="wrap foot">
     Richard Graham<br>
     Executive Operations Partner<br>
     Boston, Massachusetts<br>
     <a href="mailto:richard@dalton-graham.com">richard@dalton-graham.com</a>
-  </p>
+  </div>
 </footer>
+
+<script>
+(function(){
+  var items=document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window)){items.forEach(function(e){e.classList.add('seen');});return;}
+  var io=new IntersectionObserver(function(en){
+    en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target);}});
+  },{rootMargin:'0px 0px -6% 0px',threshold:.05});
+  items.forEach(function(e,i){e.style.transitionDelay=Math.min(i*35,210)+'ms';io.observe(e);});
+})();
+</script>
+</body>
+</html>
