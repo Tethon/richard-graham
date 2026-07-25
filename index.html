@@ -73,6 +73,12 @@ body{
 .entry__org{font-family:"Spectral",Georgia,serif;font-weight:400;font-size:clamp(20px,2.4vw,24px);line-height:1.25;margin:0 0 4px;letter-spacing:-.01em;}
 .entry__date{color:var(--mute);display:block;margin-bottom:11px;}
 .entry__body{margin:0;max-width:var(--measure);color:var(--ink-2);font-size:15.5px;}
+.entry--quiet .entry__org{font-family:"Archivo",system-ui,sans-serif;font-weight:600;font-size:16.5px;letter-spacing:0;}
+.entry--quiet .entry__body{font-size:14.5px;color:var(--mute);}
+.entry--quiet::before{width:5px;height:5px;left:-2px;top:9px;}
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:0 34px;margin:0;padding:0;list-style:none;}
+.caps li{font-size:14.5px;color:var(--ink-2);padding:9px 0;border-bottom:1px solid var(--rule);}
+.caps__note{max-width:var(--measure);font-size:14px;color:var(--mute);margin:18px 0 0;}
 .creds{margin:0 0 clamp(26px,3vw,36px);padding:0;list-style:none;max-width:var(--measure);}
 .creds li{padding:15px 0;border-bottom:1px solid var(--rule);}
 .creds li:first-child{border-top:1px solid var(--rule);}
@@ -115,29 +121,53 @@ footer a{color:var(--patina);}
     <p class="hero__pattern">Different industries. Same role.</p>
     <div class="links">
       <a class="link link--go" href="mailto:richard@dalton-graham.com">Email Richard</a>
-      <a class="link" href="approach.html">My approach</a>
+      <a class="link" href="approach.html">myApproach</a>
       <a class="link" href="https://linkedin.com/in/richard-graham-624a20423">LinkedIn</a>
       <a class="link" href="Richard_Graham_Resume.pdf">Résumé (PDF)</a>
     </div>
   </div>
 </header>
+
+<section class="band band--alt">
+  <div class="wrap">
+    <p class="band__eyebrow tag rise">Capabilities</p>
+    <h2 class="band__title rise">What I run, day to day.</h2>
+    <ul class="caps rise">
+      <li>Executive calendar and inbox ownership</li>
+      <li>Gatekeeping and executive screening</li>
+      <li>Domestic and multi-leg international travel</li>
+      <li>Expense reporting and reconciliation</li>
+      <li>Board, executive, and offsite meeting preparation</li>
+      <li>Agendas, briefing materials, minutes, action tracking</li>
+      <li>Contract, lease, and invoice administration</li>
+      <li>Bookkeeping, invoicing, and month-end support</li>
+      <li>Vendor, facilities, and stakeholder coordination</li>
+      <li>Confidential communications and discretion</li>
+    </ul>
+    <p class="caps__note rise">Microsoft 365 &mdash; Outlook, Word, Excel, PowerPoint, Teams &middot; SharePoint &middot; OneDrive &middot; Google Workspace &middot; QuickBooks &middot; DocuSign &middot; Adobe Acrobat &middot; Zoom &middot; Taleo</p>
+  </div>
+</section>
 <section class="band" id="experience">
   <div class="wrap">
     <p class="band__eyebrow tag rise">Selected experience</p>
-    <h2 class="band__title rise">Six institutions. One function.</h2>
+    <h2 class="band__title rise">Merck, Genzyme, Columbia, the U.S. Senate. One function.</h2>
     <ol class="record">
-      <li class="entry entry--now rise"><span class="entry__tags tag"><span class="entry__fn">Executive operations</span><span class="entry__sep">/</span><span class="entry__ctx">ongoing build</span></span><h3 class="entry__org">Blackwater Development LLC</h3><span class="entry__date tag">2018 &ndash; Present &middot; Massachusetts</span><p class="entry__body">Executive and operations partner to a private development principal. Portfolio spans multimillion-dollar residential development, property operations, and financial administration. Manage calendar, communications, contracts, and QuickBooks records; conduct due diligence across deeds, chains of title, and covenants; support acquisition strategy and closing decisions.</p></li>
-      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">through an acquisition</span></span><h3 class="entry__org">Genzyme Corporation / Sanofi</h3><span class="entry__date tag">2010 &ndash; 2011 &middot; Cambridge, MA</span><p class="entry__body">Senior Administrative Assistant supporting the President of Molecular Oncology / Multiple Sclerosis and the Vice President of Business Development during the Sanofi acquisition. Prepared executive reports, supported budgets and vendor evaluation, and coordinated clinical-affiliation outreach with Harvard, UMass, and Boston College.</p></li>
-      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">at facility launch</span></span><h3 class="entry__org">Merck Research Laboratories</h3><span class="entry__date tag">2006 &ndash; 2007 &middot; Boston, MA</span><p class="entry__body">Executive Assistant to the Senior Director of Molecular Oncology during the launch of a new research facility and laboratory. Managed complex calendars, multi-leg international travel, site budgets, and procurement. Coordinated scientists, facilities, IT, AV, security, vendors, and visitors while the team stood up operations.</p></li>
+      <li class="entry entry--now rise"><span class="entry__tags tag"><span class="entry__fn">Executive operations</span><span class="entry__sep">/</span><span class="entry__ctx">ongoing build</span></span><h3 class="entry__org">Blackwater Development</h3><span class="entry__date tag">2018 &ndash; Present &middot; Massachusetts</span><p class="entry__body">Executive and operations partner to the principal of a private development operation spanning multimillion-dollar residential development, property operations, and financial administration. Own the calendar, inbox, and confidential communications, and prepare the briefing materials, research summaries, and action tracking that decisions run on. Reconstruct property histories from deeds, chains of title, and covenants to clarify ownership, identify development constraints, and surface matters for attorney or title review. Engagement with the principal has been continuous since October 2018.</p></li>
+      <li class="entry entry--quiet rise"><span class="entry__tags tag"><span class="entry__fn">Independent business</span><span class="entry__sep">/</span><span class="entry__ctx">self-employed</span></span><h3 class="entry__org">Richard D. Graham, LLC</h3><span class="entry__date tag">2014 &ndash; 2018 &middot; Florida</span><p class="entry__body">Sole member of a Florida business spanning residential real estate, solar energy sales, and business consulting. Sales and leasing conducted under brokerage affiliation, first with PMO Realty and then Keller Williams Realty.</p></li>
+
+      <li class="entry entry--quiet rise"><span class="entry__tags tag"><span class="entry__fn">HR and administrative support</span><span class="entry__sep">/</span><span class="entry__ctx">seasonal appointments</span></span><h3 class="entry__org">Macy's</h3><span class="entry__date tag">2010 &ndash; 2014 &middot; Natick, MA and Orlando, FL</span><p class="entry__body">Sales Ambassador, promoted to Administrative Support Team Associate. Supported store HR and management-office operations in Taleo: candidate and new-hire records, offer and onboarding documentation, interview scheduling, and hiring reports.</p></li>
+
+      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">through an acquisition</span></span><h3 class="entry__org">Genzyme Corporation / Sanofi</h3><span class="entry__date tag">Oct 2010 &ndash; Feb 2011 &middot; Cambridge, MA</span><p class="entry__body">Senior Administrative Assistant supporting the President of Molecular Oncology / Multiple Sclerosis and the Vice President of Business Development during the Sanofi acquisition. Prepared executive reports, supported budgets and vendor evaluation, and coordinated clinical-affiliation outreach with Harvard, UMass, and Boston College. Contract engagement through Randstad.</p></li>
+      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Executive support</span><span class="entry__sep">/</span><span class="entry__ctx">at facility launch</span></span><h3 class="entry__org">Merck Research Laboratories</h3><span class="entry__date tag">2006 &ndash; 2007 &middot; Boston, MA</span><p class="entry__body">Executive Assistant to the Senior Director of Molecular Oncology during the launch of a new research facility and laboratory. Managed complex calendars, multi-leg international travel, site budgets, and procurement. Coordinated scientists, facilities, IT, AV, security, vendors, and visitors while the team stood up operations. Contract engagement through Kelly Services.</p></li>
       <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Institutional development</span><span class="entry__sep">/</span><span class="entry__ctx">program built from scratch</span></span><h3 class="entry__org">Columbia University &mdash; Columbia 250</h3><span class="entry__date tag">2003 &ndash; 2004 &middot; New York, NY</span><p class="entry__body">Director of Corporate Sponsorship for Columbia's 250th anniversary. Established the corporate development program from scratch, built a pipeline of more than 100 corporate prospects, and managed relationships through university events, symposia, and performances.</p></li>
-      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Public affairs</span><span class="entry__sep">/</span><span class="entry__ctx">newly elected office</span></span><h3 class="entry__org">New York State Senate &mdash; Office of Senator Liz Krueger</h3><span class="entry__date tag">2002 &ndash; 2003 &middot; New York, NY</span><p class="entry__body">Director of Public Affairs and Communications for a newly elected senator. Directed media relations, maintained community and government relationships, conducted confidential issue research, and helped establish the office's public-facing operations.</p></li>
-      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Finance &amp; operations</span><span class="entry__sep">/</span><span class="entry__ctx">campaign into new office</span></span><h3 class="entry__org">Clinton Senate Campaign, U.S. Senate Office &amp; HillPAC</h3><span class="entry__date tag">1999 &ndash; 2002 &middot; New York, NY</span><p class="entry__body">Five roles of increasing responsibility across Hillary Clinton's 2000 Senate campaign, the transition into the new Senate office, and HillPAC. As Deputy Finance Director, managed a portfolio of more than 1,000 donor prospects. In the newly established Senate office, worked with the Sergeant at Arms on IT systems, constituent databases, and official Senate mailings, helping build operational infrastructure at launch.</p></li>
+      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Public affairs</span><span class="entry__sep">/</span><span class="entry__ctx">newly elected office</span></span><h3 class="entry__org">New York State Senate &mdash; Office of Senator Liz Krueger</h3><span class="entry__date tag">2002 &ndash; 2003 &middot; New York, NY</span><p class="entry__body">Director of Public Affairs and Communications for a newly elected senator. Directed media relations, maintained community and government relationships, conducted confidential issue research, and helped establish the office's public-facing operations. Completed Emily's List training in campaign planning, press secretary work, and fundraising.</p></li>
+      <li class="entry rise"><span class="entry__tags tag"><span class="entry__fn">Finance &amp; operations</span><span class="entry__sep">/</span><span class="entry__ctx">campaign into new office</span></span><h3 class="entry__org">Clinton Senate Campaign, U.S. Senate Office &amp; HillPAC</h3><span class="entry__date tag">1999 &ndash; 2002 &middot; New York, NY</span><p class="entry__body">Five roles of increasing responsibility across Hillary Clinton's 2000 Senate campaign, the transition into the new Senate office, and HillPAC. As Deputy Finance Director, managed a portfolio of more than 1,000 donor prospects. In the newly established Senate office, worked with the Sergeant at Arms on IT systems, constituent databases, and official Senate mailings, helping build operational infrastructure at launch. Completed U.S. Secret Service advance training through the Office of the First Lady.</p></li>
     </ol>
   </div>
 </section>
 <section class="band band--alt">
   <div class="wrap">
-    <p class="band__eyebrow tag rise">Research and academic background</p>
+    <p class="band__eyebrow tag rise">Research and Academic Background</p>
     <h2 class="band__title rise">Trained to find out what is true.</h2>
     <p class="lede rise">My approach to operations was shaped by scientific training. That is where the habits come from: define the question, gather what is observable, resist the conclusion you were hoping for. It is also why complex technical environments have never intimidated me.</p>
     <ul class="creds rise">
@@ -146,7 +176,7 @@ footer a{color:var(--patina);}
       <li><strong>Bachelor of Arts, Psychology &mdash; cum laude</strong><span>Florida Atlantic University. Minor in Political Science. Liberal Arts Honors Program and honors thesis.</span></li>
       <li><strong>Florida Real Estate Sales Associate</strong><span>License SL3288477, active. Florida Department of Business and Professional Regulation.</span></li>
     </ul>
-    <p class="sub rise">Publications and conference presentations</p>
+    <p class="sub rise">Publications and Conference Presentations</p>
     <p class="cite rise">Graham, R.D., Menge, J.A., Terry, L.M., &amp; Hall, W.G. (1998). The effects of isolated maternal cues on ultrasonic vocalizations in neonatal rats [Abstract]. <em>Developmental Psychobiology, 32</em>(2). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, New Orleans.</p>
     <p class="cite rise">Graham, R.D., Blandino, P., Johanson, I.B., &amp; Terry, L.M. (1997). Repeated maternal deprivation: effects of concurrent odor exposure [Abstract]. <em>Developmental Psychobiology, 30</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, Washington, D.C.</p>
     <p class="cite rise">Graham, R.D., Johanson, I.B., &amp; Terry, L.M. (1996). Effects of cocaine on memory for odor-milk pairings in young rats [Abstract]. <em>Developmental Psychobiology, 29</em>(3). Presented at the Annual Meeting of the International Society for Developmental Psychobiology, San Diego.</p>
@@ -162,16 +192,16 @@ footer a{color:var(--patina);}
   <div class="wrap">
     <p class="band__eyebrow tag rise">Beyond the work</p>
     <h2 class="band__title rise">Different industries. Same person.</h2>
-    <div class="prose rise"><p>In the late nineties I was running graduate research at a Columbia lab, working a Senate campaign, teaching experimental psychology, and playing in a softball league in New York. Someone called me a Renaissance man. I took it to mean I could hold several complicated things at once, which turned out to be the whole job description.</p><p>Since then: a background role in an episode of <em>Burn Notice</em>. Field research on ants, spadefoot toads, and lizards in the Chiricahua Mountains with the American Museum of Natural History. Voter outreach and field operations on a string of campaigns from Florida to Colorado. Enough campaign finance work to know what a fundraising deadline feels like at midnight.</p></div>
+    <div class="prose rise"><p>In the late nineties I was running graduate research at a Columbia lab, working a Senate campaign, teaching experimental psychology, and playing in a softball league in New York. Holding several complicated things at once turned out to be the whole job description.</p><p>Since then: a background role in an episode of <em>Burn Notice</em>. Field research on ants, spadefoot toads, and lizards in the Chiricahua Mountains with the American Museum of Natural History. Voter outreach and field operations on a string of campaigns from Florida to Colorado. Enough campaign finance work to know what a fundraising deadline feels like at midnight.</p></div>
   </div>
 </section>
 <section class="close">
   <div class="wrap">
     <h2>Building something complex? Let's talk.</h2>
-    <p>I'm currently looking for Executive Operations and senior executive support roles in Boston and Cambridge.</p>
+    <p>I'm currently looking for Executive Operations and Senior Executive Support roles in Boston and Cambridge, onsite or hybrid. Available within two weeks, and open to both permanent and contract engagements.</p>
     <div class="links">
       <a class="link link--go" href="mailto:richard@dalton-graham.com">Email Richard</a>
-      <a class="link" href="approach.html">My approach</a>
+      <a class="link" href="approach.html">myApproach</a>
       <a class="link" href="https://linkedin.com/in/richard-graham-624a20423">LinkedIn</a>
       <a class="link" href="Richard_Graham_Resume.pdf">Résumé (PDF)</a>
     </div>
